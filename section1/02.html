@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        // let answer;
+        // let score = [a, b, c];
+        // score.sort();
+        // if (score[0] + score[1] >= score[2]) answer = "Yes";
+        // else answer = "No";
+        // return answer;
+
+        // 답
+        let answer = "Yes",
+          max;
+        let sum = a + b + c;
+        if (a > b) max = a;
+        else max = b;
+        if (c > max) max = c;
+        if (sum - max <= max) answer = "NO";
+        return answer;
+      }
+
+      console.log(solution(13, 33, 17));
+    </script>
+  </body>
+</html>
