@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        if (s.length % 2 == 0) {
+          let mid = Math.floor(s.length / 2);
+          answer = s.substring(mid - 1, mid + 1);
+        } else {
+          s.substring(mid, mid + 1);
+        }
+
+        // 답
+        // answer= s.substr(mid,1)
+        // answer= s.substr(mid-1, 2)
+
+        return answer;
+      }
+      console.log(solution("good"));
+    </script>
+  </body>
+</html>

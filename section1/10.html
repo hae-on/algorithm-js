@@ -7,12 +7,16 @@
     <script>
       function solution(s, t) {
         let answer = 0;
-        for (let x of str) {
-          if (x === t) {
-            answer++;
-          }
-        }
-        return answer;
+        // for (let x of str) {
+        //   if (x === t) {
+        //     answer++;
+        //   }
+        // }
+        // return answer;
+
+        // 답
+        answer = s.split(t).length;
+        return answer - 1;
       }
 
       let str = "COMPUTERPROGRAMMING";
