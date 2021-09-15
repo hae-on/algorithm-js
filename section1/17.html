@@ -7,7 +7,14 @@
     <script>
       function solution(s) {
         let answer;
+        // const set = new Set(s);
+        // answer = [...set];
 
+        // 답
+        answer = s.filter(function (v, i) {
+          console.log(s.indexOf(v));
+          return s.indexOf(v) === i;
+        });
         return answer;
       }
       let str = ["good", "time", "good", "time", "student"];
