@@ -7,8 +7,14 @@
     <script>
       function solution(str) {
         let answer = "";
+        // answer = str.replace(/[^0-9]/g, "");
 
-        return parseInt(answer);
+        // 답
+        for (let x of str) {
+          if (!isNaN(x)) answer += x;
+        }
+
+        return parseInt(answer); //맨 앞 숫자 0 때문에
       }
 
       let str = "g0en2T0s8eSoft";
