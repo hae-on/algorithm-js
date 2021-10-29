@@ -9,7 +9,15 @@
         let answer = 0,
           lt = 0,
           sum = 0;
-
+        for (let rt = 0; rt < a.length; rt++) {
+          sum += arr[rt];
+          if (sum === m) answer++;
+          // 될 때까지 빼야하므로 while 사용
+          while (sum > m) {
+            sum -= arr[lt++];
+            if (sum === m) answer++;
+          }
+        }
         return answer;
       }
 
