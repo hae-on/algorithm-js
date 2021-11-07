@@ -6,6 +6,26 @@
   <body>
     <script>
       function solution(size, arr) {
+        let answer = Array.from({ length: size }, () => 0);
+        arr.forEach((x) => {
+          let pos = -1;
+          for (let i = 0; i < size; i++) {
+            if (x === answer[i]) pos = i;
+          }
+          // Cache Miss
+          if (pos === -1) {
+            for (i = size - 1; i >= 1; i--) {
+              answer[i] = answer[i - 1];
+            }
+            // Cache Hit
+          } else {
+            for (i = pos; i >= 1; i--) {
+              answer[i] = answer[i - 1];
+            }
+          }
+          answer[0] = x;
+        });
+
         return answer;
       }
 
@@ -24,7 +44,23 @@
     <script>
       function solution(size, arr) {
         let answer = [];
-
+        arr.forEach((x) => {
+          let pos = -1;
+          for (let i = 0; i < size; i++) {
+            if (x === answer[i]) pos = i;
+          }
+          // Cache Miss
+          if (pos === -1) {
+            answer.unshift(x);
+            // arr가 늘어나는 것 방지
+            if (answer.length > size) answer.pop();
+          }
+          // Cache Hit
+          else {
+            answer.splice(pos, 1);
+            answer.unshift(x);
+          }
+        });
         return answer;
       }
 
