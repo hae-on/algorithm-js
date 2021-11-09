@@ -6,15 +6,28 @@
   <body>
     <script>
       function count(songs, capacity) {
-        let cnt = 1,
+        let dvd = 1,
           sum = 0;
-
-        return cnt;
+        for (x of songs) {
+          if (sum + x > capacity) {
+            dvd++;
+            sum = x;
+          } else sum += x;
+        }
+        return dvd;
       }
 
       function solution(m, songs) {
         let answer;
-
+        let lt = Math.max(...songs);
+        let rt = arr.reduce((a, b) => a + b, 0);
+        while (lt <= rt) {
+          let mid = parseInt((lt + rt) / 2);
+          if (count(songs, mid) <= m) {
+            answer = mid;
+            rt = mid - 1;
+          } else lt = mid + 1;
+        }
         return answer;
       }
 
