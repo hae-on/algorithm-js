@@ -7,7 +7,13 @@
     <script>
       function solution(a, b) {
         let answer = "";
-
+        for (let i = 0; i < a.length; i++) {
+          if (a[i] === b[i]) answer += "D";
+          else if (a[i] === 1 && b[i] === 2) answer += "B";
+          else if (a[i] === 2 && b[i] === 3) answer += "B";
+          else if (a[i] === 3 && b[i] === 1) answer += "B";
+          else answer += "A";
+        }
         return answer;
       }
 
