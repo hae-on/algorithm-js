@@ -1,3 +1,4 @@
+// const fs = require('fs');
 // const input = fs.readFileSync('/dev/stdin').toString().split('');
 
 const sample = `A*(B+C)`;
