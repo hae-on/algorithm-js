@@ -25,7 +25,6 @@ for (let i = 0; i < input.length; i++) {
     answer += " ";
   } else {
     answer += String.fromCharCode(word);
-    // word;
   }
 }
 console.log(answer);
