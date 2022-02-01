@@ -13,23 +13,6 @@ const input = sample.split("\n");
 const T = Number(input[0]);
 input.shift();
 
-// for (let i = 0; i < T; i++) {
-//   var count = Number(input[3 * i]);
-//   var up = input[3 * i + 1].split(" ").map((v) => Number(v));
-//   var down = input[3 * i + 2].split(" ").map((v) => Number(v));
-
-//   var dp = [[0, up[0], down[0]]];
-
-//   for (let j = 1; j < count; j++) {
-//     dp[j] = [
-//       Math.max(...dp[j - 1]),
-//       Math.max(dp[j - 1][0], dp[j - 1][2]) + up[j],
-//       Math.max(dp[j - 1][0], dp[j - 1][1]) + down[j],
-//     ];
-//   }
-//   console.log(dp);
-// }
-
 for (let i = 0; i < T; i++) {
   let count = Number(input[3 * i]);
   let up = input[3 * i + 1].split(" ").map(Number);
