@@ -1,7 +1,7 @@
 // const fs = require('fs');
 // const input = fs.readFileSync('/dev/stdin').toString();
 
-const input = `9`;
+const input = `4`;
 const n = Number(input);
 
 let dy = Array.from({ length: n + 1 }, () => 0);
