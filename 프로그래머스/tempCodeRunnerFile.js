@@ -1,2 +1,2 @@
 
-  for (let i = x; i < n; i++) {
+  arr.length > 1 ? arr.splice(arr
