@@ -5,6 +5,7 @@ function solution(board) {
 
   if (row < 2 || col < 2) return 1;
 
+//   네블록씩 끊어서 계산
   for (let i = 1; i < row; i++) {
     for (let j = 1; j < col; j++) {
       if (board[i][j] !== 0) {
@@ -16,7 +17,6 @@ function solution(board) {
         board[i][j] = min + 1;
       }
       answer = Math.max(answer, board[i][j]);
-      //   if (answer < board[i][j]) answer = board[i][j];
     }
   }
   return answer * answer;
