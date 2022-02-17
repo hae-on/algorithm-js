@@ -1,3 +1,3 @@
-for(let j=1; j<i; j++){
-
+ if (arr.length > cacheSize) {
+      //     arr.shift();
       //   }
