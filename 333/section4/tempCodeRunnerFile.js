@@ -1,0 +1,1 @@
+if (cnt === m) answer++;
