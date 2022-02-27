@@ -1,1 +1,1 @@
-if (cnt === m) answer++;
+
