@@ -1,4 +1,4 @@
-function soliution(times) {
+function solution(times) {
   let answer = Number.MIN_SAFE_INTEGER;
   let timeLine = [];
   for (let x of times) {
@@ -19,7 +19,7 @@ function soliution(times) {
 }
 
 console.log(
-  soliution([
+  solution([
     [14, 18],
     [12, 15],
     [15, 20],

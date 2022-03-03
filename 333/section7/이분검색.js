@@ -1,4 +1,4 @@
-function soliution(target, arr) {
+function solution(target, arr) {
   let answer;
   arr.sort((a, b) => a - b);
 
@@ -16,4 +16,4 @@ function soliution(target, arr) {
   return answer;
 }
 
-console.log(soliution(32, [23, 87, 65, 12, 57, 32, 99, 81]));
+console.log(solution(32, [23, 87, 65, 12, 57, 32, 99, 81]));
