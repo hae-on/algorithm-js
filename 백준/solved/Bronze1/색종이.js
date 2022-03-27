@@ -1,11 +1,11 @@
 // const fs = require('fs');
-// const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n').map(Number);
+// const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n').map((v) => v.split(" ").map(Number));
 
 const sample = `3
 3 7
 15 7
 5 2`;
-let input = sample.split("\n");
+let input = sample.split("\n").map((v) => v.split(" ").map(Number));
 
 const N = input.shift();
 let paper = new Array(100).fill().map((el) => new Array(100).fill(false));
@@ -30,6 +30,3 @@ const answer = paper.reduce((prev, curr) => {
 }, 0);
 
 console.log(answer);
-
-// input이 Number로 안 바뀌는 현상 발생 (오답)
-// 백준 제출용 input에 Number 설정 시 런타임 오류
