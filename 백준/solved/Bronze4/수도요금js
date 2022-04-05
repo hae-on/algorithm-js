@@ -1,0 +1,13 @@
+// const [A, B, C, D, P] = require('fs').readFileSync('/dev/stdin').toString().trim().split("\n").map(Number);
+
+const sample = `9
+100
+20
+3
+10`;
+const [A, B, C, D, P] = sample.split("\n").map(Number);
+
+const X = P * A;
+const Y = C < P ? B + D * (P - C) : B;
+
+console.log(Math.min(X, Y));
