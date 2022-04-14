@@ -12,5 +12,3 @@ const T = input.shift();
 for (let i = 0; i < input.length; i++) {
   console.log(input[i][0] + input[i][1]);
 }
-
-// console.log(input);
