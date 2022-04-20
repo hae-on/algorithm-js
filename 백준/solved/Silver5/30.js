@@ -9,7 +9,9 @@ if (!num.includes("0")) {
 } else {
   const sum = num.reduce((acc, cur) => acc + Number(cur), 0);
   //   각 자리수 합 3으로 나누어 떨어짐
-  if (sum % 3 !== 0) return console.log(-1);
+  if (sum % 3 !== 0)
+    // return 안 붙이면 백준 출력 초과
+    console.log(-1);
   const result = num.sort((a, b) => b - a);
   console.log(result.join(""));
 }
