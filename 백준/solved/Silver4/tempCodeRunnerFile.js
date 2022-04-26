@@ -1,0 +1,1 @@
+const [N, M] = input[0].split(" ");
